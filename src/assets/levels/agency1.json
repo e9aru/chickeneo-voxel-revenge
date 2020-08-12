@@ -1,0 +1,36 @@
+{ "height":8,
+ "layers":[
+        {
+         "data":[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 3, 1, 1, 2, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 10, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 4, 0, 0, 0, 5, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+         "height":8,
+         "name":"all",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":10,
+         "x":0,
+         "y":0
+        }],
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"left-up",
+ "tileheight":2,
+ "tilesets":[
+        {
+         "columns":18,
+         "firstgid":1,
+         "image":"..\/..\/..\/tilemapSprite.png",
+         "imageheight":2,
+         "imagewidth":36,
+         "margin":0,
+         "name":"all",
+         "spacing":0,
+         "tilecount":18,
+         "tileheight":2,
+         "tilewidth":2,
+         "transparentcolor":"#ffffff"
+        }],
+ "tilewidth":2,
+ "version":1,
+ "width":10
+}

@@ -1,7 +1,116 @@
+// COLORS
+$blue: #1c3144;
+$red: #f9413e;
+$orange: #f18f01;
+$sand: #f5e2c8;
+$green: #a0b137;
+$greenDark: #687508;
+$gray: #333333;
+$grayDark: #111111;
+$white: #ffffff;
+
+// FONTS
+$font1: 'Frijole', cursive;
+$font2: 'Faster One', cursive;
+$font3: 'Amatica SC', cursive;
+
+@keyframes blink {
+  0%   { opacity: .8; }
+  100% { opacity: 0; }
+}
+
+
 * {margin: 0; padding: 0; box-sizing: border-box;}
 canvas {display: block; margin: 0 auto;}
 
 /* YOUR STYLES */
 html {
   background-color: #000;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+#hud {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $font2;
+  cursor: default;
+  line-height: .86;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: $gray;
+    opacity: 0;
+    animation: none;
+  }
+
+  &.blink:after { animation: blink .8s ease; }
+
+  > * {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 6px;
+    line-height: 1;
+    font-size: 36px;
+    line-height: 24px;
+    transition: transform .4s ease, opacity .2s ease, height .4s ease;
+  }
+
+  &-action  {}
+  &-health  { color: $red;   bottom: 0; top: auto; left: 6px; }
+  &-energy  { color: $white; bottom: .86em; top: auto; left: 6px; }
+  &-ammo    { color: $white; font-size: 48px; left: 9px; }
+  &-inspect {
+    $fz: 28px;
+    $lh: $fz * 1.6;
+    $h: $lh + 6px;
+
+    color: $green;
+    text-align: center;
+    top: 65%;
+    transform: translateY(-50%);
+    font-family: $font3;
+    padding: 0;
+    font-size: $fz;
+    line-height: $lh;
+    height: $h;
+    background-color: rgba(0, 0, 0, .5);
+
+    &:empty { height: 0; }
+  }
+  &-main    {
+    color: #fff;
+    font-family: $font1;
+    width: 80%;
+    left: 10%;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    background: $blue;
+    opacity: .9;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    padding: 18px;
+    border: #fff 3px solid;
+
+    &:empty { opacity: 0; transform: translateY(-50%) scale(0); }
+    &.positive { border-color: $green; color: $green; }
+    &.negative { border-color: $red; color: $red; }
+  }
 }

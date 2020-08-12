@@ -2,20 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="Heroicode Games Studio <games@heroicode.com>">
+  <meta name="author" content="@e9aru <Marcin Marzewski> hi@e9aru.io - owner Heroicode Games Studio <games@heroicode.com>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
   <title></title>
+  <!--<link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>-->
+  <link href='https://fonts.googleapis.com/css?family=Frijole|Faster+One|Amatica+SC:700' rel='stylesheet' type='text/css'>
   <!-- build:scss main.css-->
   <link rel="stylesheet" href="scss/main.scss">
   <!-- endbuild -->
-  <!-- build:null libs.js -->
-  <script src="../node_modules/treejs/dist/jquery.min.js"></script>
-  <script src="../node_modules/treejs/dist/tree.js"></script>
+  <!-- build:null ./js/libs.js -->
+  <script src="../node_modules/jsfxr/jsfxr.js"></script>
+  <script src="../node_modules/easystarjs/bin/easystar-0.3.0.min.js"></script>
+  <script src="../node_modules/three/build/three.min.js"></script>
+  <script src="./js/libs/three-obj-loader.js"></script>
+  <script src="./js/libs/anaglyph-effect.js"></script>
   <!-- endbuild -->
 </head>
 <body>
-  <!-- build:js game.js -->
-  <script src="./boot.js"></script>
+  <div id="hud">
+    <div id="hud-health"></div>
+    <div id="hud-ammo"></div>
+    <div id="hud-energy"></div>
+    <div id="hud-action"></div>
+    <div id="hud-main"></div>
+    <div id="hud-inspect"></div>
+  </div>
+
+  <!-- build:js ./js/game.js -->
+  <script src="./js/boot.js"></script>
+
+  <script src="./js/models/hud.js"></script>
+
+  <script src="./js/models/sound.js"></script>
+
+  <script src="./js/models/es.js"></script>
+
+  <script src="./js/models/loader.js"></script>
+
+  <script src="./js/models/controls.js"></script>
+
+  <script src="./js/models/scene.js"></script>
+
+  <script src="./js/models/level.js"></script>
+
+  <script src="./js/models/liftroom.js"></script>
+
+  <script src="./js/models/wall.js"></script>
+
+  <script src="./js/models/lamp.js"></script>
+
+  <script src="./js/models/text.js"></script>
+
+  <script src="./js/models/elevator.js"></script>
+
+  <script src="./js/models/desk.js"></script>
+  <script src="./js/models/table.js"></script>
+
+  <script src="./js/models/particle.js"></script>
+  <script src="./js/models/blood.js"></script>
+  <script src="./js/models/cloud.js"></script>
+  <script src="./js/models/shell.js"></script>
+
+  <script src="./js/models/gun.js"></script>
+  <script src="./js/models/shotgun.js"></script>
+
+  <script src="./js/models/human.js"></script>
+  <script src="./js/models/agent.js"></script>
+  <script src="./js/models/player.js"></script>
+
+  <script src="./js/models/collider.js"></script>
+
+  <script src="./js/models/bullet.js"></script>
   <!-- endbuild -->
 </body>
 </html>

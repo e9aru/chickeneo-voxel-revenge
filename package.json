@@ -1,7 +1,7 @@
 {
   "name": "block-dead",
   "version": "1.0.0",
-  "description": "HTML5 TREEJS game",
+  "description": "HTML5 THREEJS game",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +10,13 @@
     "type": "git",
     "url": ""
   },
-  "author": "datMarcinuz <marcin@marzewski.pl>",
+  "author": "e9aru @e9aru",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.10.0",
+    "easystarjs": "^0.3.0",
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-clean": "^0.3.1",
     "gulp-jshint": "^2.0.0",
     "gulp-minify-css": "^1.2.2",
@@ -24,9 +26,9 @@
     "gulp-strip-debug": "^1.1.0",
     "gulp-uglify": "^1.5.1",
     "gulp-usemin": "^0.3.16",
-    "jshint": "^2.8.0"
-  },
-  "dependencies": {
-    "treejs": "^0.6.2"
+    "jsfxr": "0.0.1",
+    "jshint": "^2.8.0",
+    "three": "^0.78.0",
+    "three-obj-loader": "^1.0.2"
   }
 }

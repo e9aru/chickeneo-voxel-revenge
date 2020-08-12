@@ -12,6 +12,7 @@ var rev = require('gulp-rev');
 var stripDebug = require('gulp-strip-debug');
 var clean = require('gulp-clean');
 var jshint = require('gulp-jshint');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('connect', function() {
   browserSync({server: DST});
@@ -26,7 +27,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('jslint', function() {
-  return gulp.src(SRC + '/**/*.js')
+  return gulp.src(SRC + '/js/*.js')
     .pipe(jshint({
       lastsemic: true
     }))
@@ -40,19 +41,19 @@ gulp.task('clean', ['jslint'], function() {
 
 gulp.task('copy', ['clean'], function() {
   return gulp.src([
-    SRC + '/assets/*.*'
+    SRC + '/assets/**/*'
   ], {base: SRC}).pipe(gulp.dest(DST));
 });
 
 gulp.task('usemin', ['copy'], function() {
   return gulp.src(SRC + '/index.html').pipe(usemin({
-    scss: [sass()]
+    scss: [sass(), autoprefixer()]
   })).pipe(gulp.dest(DST));
 });
 
 gulp.task('usemin:sass', function() {
   return gulp.src(SRC + '/index.html').pipe(usemin({
-    scss: [sass()]
+    scss: [sass(), autoprefixer()]
   })).pipe(gulp.dest(DST)).pipe(browserSync.stream({match: "**/*.css"}));
 });
 
@@ -61,7 +62,7 @@ gulp.task('usemin:all', ['copy'], function() {
     js: [uglify({
       preserveComments: true
     }), rev()],
-    scss: [sass(), minifyCss(), rev()],
+    scss: [sass(), autoprefixer(), minifyCss(), rev()],
     html: [minifyHtml()]
   })).pipe(gulp.dest(DST));
 });
