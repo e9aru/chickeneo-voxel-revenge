@@ -3,7 +3,7 @@ Preview: https://user-images.githubusercontent.com/6353695/110258439-ed717f80-7f
 
 # About
 
-An old _unfinished_ game powered with treeJS, started back in 2016 (old name: _Block Dead_)
+An old _unfinished_ game powered with ThreeJS, started back in 2016 (old name: _Block Dead_)
 
 **action-roguelite**
 
